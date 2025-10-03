@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Streetwear Brand</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <style type="text/css">
+    /* CLIENT-SPECIFIC STYLES */
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; }
+
+    /* RESET STYLES */
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    table { border-collapse: collapse !important; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+    /* iOS BLUE LINKS */
+    a[x-apple-data-detectors]{
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    /* GMAIL BLUE LINKS */
+    u + #body a{
+      color: inherit;
+      text-decoration: none;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+    }
+
+    /* SAMSUNG MAIL BLUE LINKS */
+    #MessageViewBody a{
+      color: inherit;
+      text-decoration: none;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+    }
+
+    /* --- tiny additions to meet requirements --- */
+    .btn:hover { filter: brightness(1.07); }
+    .btn:active { transform: scale(0.98); }
+
+    /* Keyframe animation + helper class */
+    @keyframes fadeUp { 
+      from { opacity:0; transform:translateY(8px); } 
+      to   { opacity:1; transform:translateY(0); } 
+    }
+    .hero-anim { animation: fadeUp .6s ease-out both; }
+
+    /* Checkbox interactivity */
+    .hidden-input { display:none; }
+    .coupon { max-height:0; overflow:hidden; transition:max-height .3s ease; }
+    #coupon:checked ~ .coupon { max-height:120px !important; }
+
+    /* Responsive styles */
+    @media screen and (max-width: 620px) {
+      .container { width:100% !important; }        /* keep the 600px table fluid */
+      .btn-table { margin:0 auto !important; }     /* center the wrapper only */
+      .btn { display:inline-block !important;      /* don't stretch */
+             margin:0 auto !important;
+             width:auto !important; }              /* prevent full-width */
+      .col { display:block !important; width:100% !important; } /* stack columns */
+    }
+  </style>
+</head>
+<body id="body" style="margin:0 !important; padding:0 !important; background:#f2f4f7;">
+  <!-- Outer wrapper (full width) -->
+  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background:#f2f4f7;">
+    <tr>
+      <td align="center" style="padding:32px 0;">
+        <!-- Inner fixed table (recommended 600px) -->
+        <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="container" style="width:600px; max-width:600px; background:#ffffff; border-collapse:collapse; border-radius:12px; overflow:hidden;">
+          
+          <!-- Logo -->
+          <tr>
+            <td align="center" style="padding:24px;">
+              <img src="images/streetwear logo.png" alt="My brand logo" width="120" style="display:block; border:0; outline:none; text-decoration:none; height:auto;">
+            </td>
+          </tr>
+
+          <!-- Headline (animated) -->
+          <tr>
+            <td align="center" style="padding:0 24px;">
+              <h1 class="hero-anim" style="margin:40px 0 40px; color:#111827; font-family:Arial, Helvetica, sans-serif;">
+                 Fall ’25 Drop is Live
+              </h1>
+            </td>
+          </tr>
+
+          <!-- Hero (responsive) -->
+          <tr>
+            <td>
+              <img src="images/fall.jpg" 
+                   alt="Two models in fall streetwear on rocky beach" width="600" class="responsive"
+                   style="display:block; width:100%; height:auto; border:0; line-height:0;">
+            </td>
+          </tr>
+
+          <!-- Body copy -->
+          <tr>
+            <td align="center" class="p-24" style="padding:24px;">
+              <p style="margin:0; font-size:14px; color:#111827; font-family:Arial, Helvetica, sans-serif; line-height:1.6;">
+                Fall ’25 just dropped: charcoal, olive, and amber tones in relaxed fits you can live in.
+                Heavyweight tees, fleece hoodies, and canvas overshirts built for cooler nights and early classes.
+                Double-stitched where it matters, soft where it counts. Limited run. once it’s gone, it’s gone.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Centered button (spacious tap target) -->
+          <tr>
+            <td align="center" style="padding:0 24px 24px 24px;">
+              <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" class="btn-table" style="margin:0 auto;">
+                <tr>
+                  <td align="center">
+                    <a href="#"
+                       class="btn"
+                       style="display:inline-block; margin:0 auto; background:#eab308; color:#111827; text-decoration:none !important;
+                              font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:16px;
+                              padding:16px 24px; border-radius:8px; min-width:260px; text-align:center;">
+                      Shop New Styles for Fall!
+                    </a>
+                  </td>
+                </tr>
+              </table>
+              <div style="line-height:24px; height:24px;">&zwnj;</div>
+            </td>
+          </tr>
+
+          <!-- ========================= -->
+          <!-- TWO COLUMN (NEW CONTENT) -->
+          <!-- ========================= -->
+          <tr>
+            <td class="p-24" style="padding:12px 24px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="col" width="50%" style="width:50%; padding-right:8px; vertical-align:top;">
+                    <h2 style="margin:0 0 6px; font:700 18px Arial;">Hoodies</h2>
+                    <p style="margin:0 0 10px; font:14px Arial; color:#374151;">Heavy fleece with amber stitch accents.</p>
+                    <a href="#" style="font:700 14px Arial; color:#111827; text-decoration:underline;">View Hoodies →</a>
+                  </td>
+                  <td class="col" width="50%" style="width:50%; padding-left:8px; vertical-align:top;">
+                    <h2 style="margin:0 0 6px; font:700 18px Arial;">Tees</h2>
+                    <p style="margin:0 0 10px; font:14px Arial; color:#374151;">GSM 240 heavyweight, enzyme-washed soft.</p>
+                    <a href="#" style="font:700 14px Arial; color:#111827; text-decoration:underline;">Shop Tees →</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- =========================== -->
+          <!-- THREE COLUMN (NEW CONTENT) -->
+          <!-- =========================== -->
+          <tr>
+            <td style="padding:8px 16px 20px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="col" width="33.33%" style="width:33.33%; padding:8px; vertical-align:top;">
+                    <h3 style="margin:0 0 6px; font:700 15px Arial;">Durable</h3>
+                    <p style="margin:0; font:14px Arial; color:#4b5563;">Double-stitched seams.</p>
+                  </td>
+                  <td class="col" width="33.33%" style="width:33.33%; padding:8px; vertical-align:top;">
+                    <h3 style="margin:0 0 6px; font:700 15px Arial;">Comfort</h3>
+                    <p style="margin:0; font:14px Arial; color:#4b5563;">Soft heavyweight fabrics.</p>
+                  </td>
+                  <td class="col" width="33.33%" style="width:33.33%; padding:8px; vertical-align:top;">
+                    <h3 style="margin:0 0 6px; font:700 15px Arial;">Limited</h3>
+                    <p style="margin:0; font:14px Arial; color:#4b5563;">Small-batch weekly drops.</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ================================== -->
+          <!-- CHECKBOX REVEAL (INTERACTIVITY) -->
+          <!-- ================================== -->
+          <tr>
+            <td style="padding:0 24px 24px;">
+              <input id="coupon" class="hidden-input" type="checkbox">
+              <label for="coupon" style="font:700 14px Arial; color:#2563eb; cursor:pointer; display:inline-block;">
+                ▼ Reveal early-access code
+              </label>
+              <div class="coupon">
+                <div style="padding-top:8px;">
+                  <table role="presentation" width="100%" style="border:1px dashed #eab308; border-radius:8px;">
+                    <tr>
+                      <td align="center" style="padding:12px;">
+                        <strong style="font:700 16px Arial; color:#111827;">FALL-FIRST-10</strong>
+                        <div style="font:12px Arial; color:#6b7280;">10% off this week only</div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div style="height:8px; line-height:8px;">&zwnj;</div>
+              <p style="margin:0; font:12px Arial; color:#6b7280;">(Note: Some desktop Outlook versions don’t support checkbox reveals.)</p>
+            </td>
+          </tr>
+
+          <!-- Background image + text (simple) -->
+          <tr>
+            <td align="center"
+                style="background:url('images/background.jpg') center/cover no-repeat; padding:32px;">
+              <p style="margin:0; font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#ffffff; font-weight:bold;">
+                Weekly Drops • Limited Quantities
+              </p>
+              <p style="margin:8px 0 0 0; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#ffffff;">
+                Sign up for early access to Thursday night releases.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding:24px;">
+              <p style="margin:0; font-size:12px; color:#6b7280; font-family:Arial, Helvetica, sans-serif; line-height:1.6;">
+                You received this email because you previously expressed interest in news and offers about our website
+                by supplying your email address.
+                <a href="#" style="color:#eab308; text-decoration: underline;">Unsubscribe</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
