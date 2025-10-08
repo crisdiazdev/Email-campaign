@@ -46,196 +46,171 @@
       line-height: inherit;
     }
 
-    /* --- tiny additions to meet requirements --- */
+    /* --- tiny additions --- */
     .btn:hover { filter: brightness(1.07); }
     .btn:active { transform: scale(0.98); }
 
-    /* Keyframe animation + helper class */
-    @keyframes fadeUp { 
-      from { opacity:0; transform:translateY(8px); } 
-      to   { opacity:1; transform:translateY(0); } 
-    }
+    @keyframes fadeUp { from {opacity:0; transform:translateY(8px);} to {opacity:1; transform:translateY(0);} }
     .hero-anim { animation: fadeUp .6s ease-out both; }
 
-    /* Checkbox interactivity */
     .hidden-input { display:none; }
     .coupon { max-height:0; overflow:hidden; transition:max-height .3s ease; }
     #coupon:checked ~ .coupon { max-height:120px !important; }
 
-    /* Responsive styles */
     @media screen and (max-width: 620px) {
-      .container { width:100% !important; }        /* keep the 600px table fluid */
-      .btn-table { margin:0 auto !important; }     /* center the wrapper only */
-      .btn { display:inline-block !important;      /* don't stretch */
-             margin:0 auto !important;
-             width:auto !important; }              /* prevent full-width */
-      .col { display:block !important; width:100% !important; } /* stack columns */
+      .container { width:100% !important; }
+      .stack { display:block !important; width:100% !important; }
     }
   </style>
 </head>
-<body id="body" style="margin:0 !important; padding:0 !important; background:#f2f4f7;">
-  <!-- Outer wrapper (full width) -->
-  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background:#f2f4f7;">
-    <tr>
-      <td align="center" style="padding:32px 0;">
-        <!-- Inner fixed table (recommended 600px) -->
-        <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="container" style="width:600px; max-width:600px; background:#ffffff; border-collapse:collapse; border-radius:12px; overflow:hidden;">
-          
-          <!-- Logo -->
-          <tr>
-            <td align="center" style="padding:24px;">
-              <img src="https://raw.githubusercontent.com/crisdiazdev/Email-campaign/refs/heads/main/images/streetwear%20logo.png" alt="My brand logo" width="120" style="display:block; border:0; outline:none; text-decoration:none; height:auto;">
-            </td>
-          </tr>
 
-          <!-- Headline (animated) -->
-          <tr>
-            <td align="center" style="padding:0 24px;">
-              <h1 class="hero-anim" style="margin:40px 0 40px; color:#111827; font-family:Arial, Helvetica, sans-serif;">
-                 Fall ’25 Drop is Live
-              </h1>
-            </td>
-          </tr>
+<body id="body" style="margin:0; padding:0; background:#f2f4f7;">
+  <table role="presentation" width="100%" style="background:#f2f4f7;">
+    <tr><td align="center" style="padding:32px 0;">
 
-          <!-- Hero (responsive) -->
-          <tr>
-            <td>
-              <img src="https://raw.githubusercontent.com/crisdiazdev/Email-campaign/refs/heads/main/images/fall.jpg" 
-                   alt="Two models in fall streetwear on rocky beach" width="600" class="responsive"
-                   style="display:block; width:100%; height:auto; border:0; line-height:0;">
-            </td>
-          </tr>
+      <!-- Main container -->
+      <table role="presentation" width="600" class="container" style="background:#fff; border-radius:12px; overflow:hidden;">
 
-          <!-- Body copy -->
-          <tr>
-            <td align="center" class="p-24" style="padding:24px;">
-              <p style="margin:0; font-size:14px; color:#111827; font-family:Arial, Helvetica, sans-serif; line-height:1.6;">
-                Fall ’25 just dropped: charcoal, olive, and amber tones in relaxed fits you can live in.
-                Heavyweight tees, fleece hoodies, and canvas overshirts built for cooler nights and early classes.
-                Double-stitched where it matters, soft where it counts. Limited run. once it’s gone, it’s gone.
-              </p>
-            </td>
-          </tr>
+        <!-- Logo -->
+        <tr>
+          <td align="center" style="padding:24px;">
+            <img src="https://raw.githubusercontent.com/crisdiazdev/Email-campaign/refs/heads/main/images/streetwear%20logo.png" width="120" alt="Streetwear Brand Logo">
+          </td>
+        </tr>
 
-          <!-- Centered button (spacious tap target) -->
-          <tr>
-            <td align="center" style="padding:0 24px 24px 24px;">
-              <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" class="btn-table" style="margin:0 auto;">
-                <tr>
-                  <td align="center">
-                    <a href="#"
-                       class="btn"
-                       style="display:inline-block; margin:0 auto; background:#eab308; color:#111827; text-decoration:none !important;
-                              font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:16px;
-                              padding:16px 24px; border-radius:8px; min-width:260px; text-align:center;">
-                      Shop New Styles for Fall!
-                    </a>
-                  </td>
-                </tr>
-              </table>
-              <div style="line-height:24px; height:24px;">&zwnj;</div>
-            </td>
-          </tr>
+        <!-- Headline -->
+        <tr>
+          <td align="center" style="padding:0 24px;">
+            <h1 class="hero-anim" style="margin:32px 0; color:#111827; font-family:Arial,Helvetica,sans-serif;">
+              Fall ’25 Drop is Live
+            </h1>
+          </td>
+        </tr>
 
-          <!-- ========================= -->
-          <!-- TWO COLUMN (NEW CONTENT) -->
-          <!-- ========================= -->
-          <tr>
-            <td class="p-24" style="padding:12px 24px;">
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td class="col" width="50%" style="width:50%; padding-right:8px; vertical-align:top;">
-                    <h2 style="margin:0 0 6px; font:700 18px Arial;">Hoodies</h2>
-                    <p style="margin:0 0 10px; font:14px Arial; color:#374151;">Heavy fleece with amber stitch accents.</p>
-                    <a href="#" style="font:700 14px Arial; color:#111827; text-decoration:underline;">View Hoodies →</a>
-                  </td>
-                  <td class="col" width="50%" style="width:50%; padding-left:8px; vertical-align:top;">
-                    <h2 style="margin:0 0 6px; font:700 18px Arial;">Tees</h2>
-                    <p style="margin:0 0 10px; font:14px Arial; color:#374151;">GSM 240 heavyweight, enzyme-washed soft.</p>
-                    <a href="#" style="font:700 14px Arial; color:#111827; text-decoration:underline;">Shop Tees →</a>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
+        <!-- Hero image -->
+        <tr>
+          <td>
+            <img src="https://raw.githubusercontent.com/crisdiazdev/Email-campaign/refs/heads/main/images/fall.jpg" alt="Models in fall streetwear" width="600" style="display:block; width:100%; height:auto;">
+          </td>
+        </tr>
 
-          <!-- =========================== -->
-          <!-- THREE COLUMN (NEW CONTENT) -->
-          <!-- =========================== -->
-          <tr>
-            <td style="padding:8px 16px 20px;">
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td class="col" width="33.33%" style="width:33.33%; padding:8px; vertical-align:top;">
-                    <h3 style="margin:0 0 6px; font:700 15px Arial;">Durable</h3>
-                    <p style="margin:0; font:14px Arial; color:#4b5563;">Double-stitched seams.</p>
-                  </td>
-                  <td class="col" width="33.33%" style="width:33.33%; padding:8px; vertical-align:top;">
-                    <h3 style="margin:0 0 6px; font:700 15px Arial;">Comfort</h3>
-                    <p style="margin:0; font:14px Arial; color:#4b5563;">Soft heavyweight fabrics.</p>
-                  </td>
-                  <td class="col" width="33.33%" style="width:33.33%; padding:8px; vertical-align:top;">
-                    <h3 style="margin:0 0 6px; font:700 15px Arial;">Limited</h3>
-                    <p style="margin:0; font:14px Arial; color:#4b5563;">Small-batch weekly drops.</p>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
+        <!-- Body text -->
+        <tr>
+          <td align="center" style="padding:24px;">
+            <p style="margin:0; color:#111827; font-size:14px; line-height:1.6; font-family:Arial,Helvetica,sans-serif;">
+              Fall ’25 just dropped: charcoal, olive, and amber tones in relaxed fits you can live in.
+              Heavyweight tees, fleece hoodies, and canvas overshirts built for cooler nights.
+              Double-stitched where it matters, soft where it counts. Limited run—once it’s gone, it’s gone.
+            </p>
+          </td>
+        </tr>
 
-          <!-- ================================== -->
-          <!-- CHECKBOX REVEAL (INTERACTIVITY) -->
-          <!-- ================================== -->
-          <tr>
-            <td style="padding:0 24px 24px;">
-              <input id="coupon" class="hidden-input" type="checkbox">
-              <label for="coupon" style="font:700 14px Arial; color:#2563eb; cursor:pointer; display:inline-block;">
-                ▼ Reveal early-access code
-              </label>
-              <div class="coupon">
-                <div style="padding-top:8px;">
-                  <table role="presentation" width="100%" style="border:1px dashed #eab308; border-radius:8px;">
-                    <tr>
-                      <td align="center" style="padding:12px;">
-                        <strong style="font:700 16px Arial; color:#111827;">FALL-FIRST-10</strong>
-                        <div style="font:12px Arial; color:#6b7280;">10% off this week only</div>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
+        <!-- Button -->
+        <tr>
+          <td align="center" style="padding-bottom:24px;">
+            <a href="#" class="btn" style="background:#eab308; color:#111827; text-decoration:none; font-weight:bold; border-radius:8px; padding:16px 24px; display:inline-block;">
+              Shop New Styles for Fall!
+            </a>
+          </td>
+        </tr>
+
+        <!-- Two-column section -->
+       
+        <tr>
+          <td style="padding:16px 24px;">
+            <table role="presentation" width="100%">
+              <tr>
+                <!-- Left column -->
+                <td class="stack" width="50%" style="padding:12px; vertical-align:top;">
+                  <h2 style="margin:0 0 6px; font:700 18px Arial, Helvetica, sans-serif;">Hoodies</h2>
+                  <p style="margin:0 0 10px; font:14px Arial, Helvetica, sans-serif; color:#374151;">
+                    Heavy fleece with amber stitch accents.
+                  </p>
+                  <a href="#" style="font:700 14px Arial, Helvetica, sans-serif; color:#111827; text-decoration:underline;">
+                    View Hoodies →
+                  </a>
+                </td>
+
+                <!-- Right column -->
+                <td class="stack" width="50%" style="padding:12px; vertical-align:top;">
+                  <h2 style="margin:0 0 6px; font:700 18px Arial, Helvetica, sans-serif;">Tees</h2>
+                  <p style="margin:0 0 10px; font:14px Arial, Helvetica, sans-serif; color:#374151;">
+                    GSM 240 heavyweight, enzyme-washed soft.
+                  </p>
+                  <a href="#" style="font:700 14px Arial, Helvetica, sans-serif; color:#111827; text-decoration:underline;">
+                    Shop Tees →
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+
+        <!-- Three-column section -->
+        <tr>
+          <td style="padding:8px 16px 20px;">
+            <table role="presentation" width="100%">
+              <tr>
+                <td class="stack" width="33%" style="padding:12px; border:1px solid #e5e7eb; border-radius:10px;" valign="top">
+                  <h3 style="margin:0 0 6px; font-size:15px;">Durable</h3>
+                  <p style="margin:0; font-size:14px; color:#4b5563;">Double-stitched seams.</p>
+                </td>
+                <td class="stack" width="33%" style="padding:12px; border:1px solid #e5e7eb; border-radius:10px;" valign="top">
+                  <h3 style="margin:0 0 6px; font-size:15px;">Comfort</h3>
+                  <p style="margin:0; font-size:14px; color:#4b5563;">Soft heavyweight fabrics.</p>
+                </td>
+                <td class="stack" width="33%" style="padding:12px; border:1px solid #e5e7eb; border-radius:10px;" valign="top">
+                  <h3 style="margin:0 0 6px; font-size:15px;">Limited</h3>
+                  <p style="margin:0; font-size:14px; color:#4b5563;">Small-batch weekly drops.</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Checkbox reveal -->
+        <tr>
+          <td style="padding:0 24px 24px;">
+            <input id="coupon" class="hidden-input" type="checkbox">
+            <label for="coupon" style="font-weight:bold; font-size:14px; color:#2563eb; cursor:pointer;">
+              ▼ Reveal early-access code
+            </label>
+            <div class="coupon">
+              <div style="padding-top:8px;">
+                <table role="presentation" width="100%" style="border:1px dashed #eab308; border-radius:8px;">
+                  <tr>
+                    <td align="center" style="padding:12px;">
+                      <strong style="font-size:16px; color:#111827;">FALL-FIRST-10</strong>
+                      <div style="font-size:12px; color:#6b7280;">10% off this week only</div>
+                    </td>
+                  </tr>
+                </table>
               </div>
-              <div style="height:8px; line-height:8px;">&zwnj;</div>
-              <p style="margin:0; font:12px Arial; color:#6b7280;">(Note: Some desktop Outlook versions don’t support checkbox reveals.)</p>
-            </td>
-          </tr>
+            </div>
+          </td>
+        </tr>
 
-          <!-- Background image + text (simple) -->
-          <tr>
-            <td align="center"
-                style="background:url('https://raw.githubusercontent.com/crisdiazdev/Email-campaign/refs/heads/main/images/background.jpg') center/cover no-repeat; padding:32px;">
-              <p style="margin:0; font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#ffffff; font-weight:bold;">
-                Weekly Drops • Limited Quantities
-              </p>
-              <p style="margin:8px 0 0 0; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#ffffff;">
-                Sign up for early access to Thursday night releases.
-              </p>
-            </td>
-          </tr>
+        <!-- Background section -->
+        <tr>
+          <td align="center" style="background:url('https://raw.githubusercontent.com/crisdiazdev/Email-campaign/refs/heads/main/images/background.jpg') center/cover no-repeat; padding:32px;">
+            <p style="margin:0; font-size:18px; color:#fff; font-weight:bold;">Weekly Drops • Limited Quantities</p>
+            <p style="margin:8px 0 0; font-size:14px; color:#fff;">Sign up for early access to Thursday night releases.</p>
+          </td>
+        </tr>
 
-          <!-- Footer -->
-          <tr>
-            <td align="center" style="padding:24px;">
-              <p style="margin:0; font-size:12px; color:#6b7280; font-family:Arial, Helvetica, sans-serif; line-height:1.6;">
-                You received this email because you previously expressed interest in news and offers about our website
-                by supplying your email address.
-                <a href="#" style="color:#eab308; text-decoration: underline;">Unsubscribe</a>
-              </p>
-            </td>
-          </tr>
+        <!-- Footer -->
+        <tr>
+          <td align="center" style="padding:24px;">
+            <p style="margin:0; font-size:12px; color:#6b7280; line-height:1.6;">
+              You received this email because you previously expressed interest in our brand.
+              <a href="#" style="color:#eab308; text-decoration:underline;">Unsubscribe</a>
+            </p>
+          </td>
+        </tr>
 
-        </table>
-      </td>
-    </tr>
+      </table>
+    </td></tr>
   </table>
 </body>
 </html>
