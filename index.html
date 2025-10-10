@@ -46,20 +46,36 @@
       line-height: inherit;
     }
 
-    /* --- tiny additions --- */
+    /* Hover and active for button */
     .btn:hover { filter: brightness(1.07); }
     .btn:active { transform: scale(0.98); }
 
+    /*keyframes*/
     @keyframes fadeUp { from {opacity:0; transform:translateY(8px);} to {opacity:1; transform:translateY(0);} }
     .hero-anim { animation: fadeUp .6s ease-out both; }
 
+    /* animation using letter-spacing */
+    @keyframes trackIn { from { letter-spacing: 2px; } to { letter-spacing: 0; } }
+    .track-anim { animation: trackIn .6s ease-out both; }
+
+    /* reveal coupon code */
     .hidden-input { display:none; }
     .coupon { max-height:0; overflow:hidden; transition:max-height .3s ease; }
     #coupon:checked ~ .coupon { max-height:120px !important; }
 
-    @media screen and (max-width: 620px) {
+    /* radio tabs */
+    #tab1:checked ~ .tabs .panel-1,
+    #tab2:checked ~ .tabs .panel-2,
+    #tab3:checked ~ .tabs .panel-3 { display:block !important; }
+    .tab { display:inline-block; padding:8px 12px; border:1px solid #e5e7eb; border-bottom:none; border-radius:8px 8px 0 0; font:600 14px Arial, Helvetica, sans-serif; margin-right:6px; }
+    .panel { display:none; border:1px solid #e5e7eb; border-radius:0 8px 8px 8px; padding:12px; font:14px Arial, Helvetica, sans-serif; color:#374151; }
+
+    /* responsive */
+    @media screen and (max-width: 600px) {
       .container { width:100% !important; }
       .stack { display:block !important; width:100% !important; }
+      .mobile-text { font-size:15px !important; line-height:1.6 !important; }
+      h1 { font-size:24px !important; }
     }
   </style>
 </head>
@@ -68,20 +84,20 @@
   <table role="presentation" width="100%" style="background:#f2f4f7;">
     <tr><td align="center" style="padding:32px 0;">
 
-      <!-- Main container -->
+      <!-- Main table container -->
       <table role="presentation" width="600" class="container" style="background:#fff; border-radius:12px; overflow:hidden;">
 
         <!-- Logo -->
         <tr>
           <td align="center" style="padding:24px;">
-            <img src="https://raw.githubusercontent.com/crisdiazdev/Email-campaign/refs/heads/main/images/streetwear%20logo.png" width="120" alt="Streetwear Brand Logo">
+            <img src="https://raw.githubusercontent.com/crisdiazdev/Email-campaign/refs/heads/main/images/streetwear%20logo.png" width="120" alt="Streetwear Brand Logo" style="display:block; width:120px; height:auto;">
           </td>
         </tr>
 
         <!-- Headline -->
         <tr>
           <td align="center" style="padding:0 24px;">
-            <h1 class="hero-anim" style="margin:32px 0; color:#111827; font-family:Arial,Helvetica,sans-serif;">
+            <h1 class="hero-anim track-anim" style="margin:32px 0; color:#111827; font-family:Arial,Helvetica,sans-serif;">
               Fall ’25 Drop is Live
             </h1>
           </td>
@@ -97,7 +113,7 @@
         <!-- Body text -->
         <tr>
           <td align="center" style="padding:24px;">
-            <p style="margin:0; color:#111827; font-size:14px; line-height:1.6; font-family:Arial,Helvetica,sans-serif;">
+            <p class="mobile-text" style="margin:0; color:#111827; font-size:14px; line-height:1.6; font-family:Arial,Helvetica,sans-serif;">
               Fall ’25 just dropped: charcoal, olive, and amber tones in relaxed fits you can live in.
               Heavyweight tees, fleece hoodies, and canvas overshirts built for cooler nights.
               Double-stitched where it matters, soft where it counts. Limited run—once it’s gone, it’s gone.
@@ -114,8 +130,7 @@
           </td>
         </tr>
 
-        <!-- Two-column section -->
-       
+        <!-- Two-column section (super simple) -->
         <tr>
           <td style="padding:16px 24px;">
             <table role="presentation" width="100%">
@@ -146,9 +161,7 @@
           </td>
         </tr>
 
-
-        <!-- Three-column section -->
-         
+        <!-- Three-column section (super simple) -->
         <tr>
           <td style="padding:16px 24px;">
             <table role="presentation" width="100%">
@@ -156,32 +169,51 @@
                 <!-- Column 1 -->
                 <td class="stack" width="33%" style="padding:12px; vertical-align:top; text-align:center;">
                   <h3 style="margin:0 0 6px; font:700 15px Arial, Helvetica, sans-serif;">Durable</h3>
-                  <p style="margin:0; font:14px Arial, Helvetica, sans-serif; color:#4b5563;">
-                    Double-stitched seams.
-                  </p>
+                  <p style="margin:0; font:14px Arial, Helvetica, sans-serif; color:#4b5563;">Double-stitched seams.</p>
                 </td>
 
                 <!-- Column 2 -->
                 <td class="stack" width="33%" style="padding:12px; vertical-align:top; text-align:center;">
                   <h3 style="margin:0 0 6px; font:700 15px Arial, Helvetica, sans-serif;">Comfortable</h3>
-                  <p style="margin:0; font:14px Arial, Helvetica, sans-serif; color:#4b5563;">
-                    Soft heavyweight fabrics.
-                  </p>
+                  <p style="margin:0; font:14px Arial, Helvetica, sans-serif; color:#4b5563;">Soft heavyweight fabrics.</p>
                 </td>
 
                 <!-- Column 3 -->
                 <td class="stack" width="33%" style="padding:12px; vertical-align:top; text-align:center;">
                   <h3 style="margin:0 0 6px; font:700 15px Arial, Helvetica, sans-serif;">Limited</h3>
-                  <p style="margin:0; font:14px Arial, Helvetica, sans-serif; color:#4b5563;">
-                    Small-batch weekly drops.
-                  </p>
+                  <p style="margin:0; font:14px Arial, Helvetica, sans-serif; color:#4b5563;">Small-batch weekly drops.</p>
                 </td>
               </tr>
             </table>
           </td>
         </tr>
 
-       
+        <!-- RADIO TABS (Men / Women / Accessories) -->
+        <tr>
+          <td style="padding:0 24px 24px;">
+            <!-- radios (hidden) -->
+            <input class="hidden-input" type="radio" name="tabs" id="tab1" checked>
+            <input class="hidden-input" type="radio" name="tabs" id="tab2">
+            <input class="hidden-input" type="radio" name="tabs" id="tab3">
+
+            <!-- labels -->
+            <div>
+              <label class="tab" for="tab1">Men</label>
+              <label class="tab" for="tab2">Women</label>
+              <label class="tab" for="tab3">Accessories</label>
+            </div>
+
+            <!-- panels -->
+            <div class="tabs">
+              <div class="panel panel-1">Relaxed hoodies, heavyweight tees, carpenter pants.</div>
+              <div class="panel panel-2">Cropped hoodies, ribbed tops, pleated cargos.</div>
+              <div class="panel panel-3">Beanies, belts, tote bags in seasonal tones.</div>
+            </div>
+
+            <p style="margin:8px 0 0; font:12px Arial, Helvetica, sans-serif; color:#6b7280;">
+            </p>
+          </td>
+        </tr>
 
         <!-- Checkbox reveal -->
         <tr>
