@@ -46,17 +46,17 @@
       line-height: inherit;
     }
 
-    /* Hover and active for button */
+    /* brightess and slight shrink interactivity for button */
     .btn:hover { filter: brightness(1.07); }
     .btn:active { transform: scale(0.98); }
 
-    /*keyframes*/
+    /*keyframes for hero title */
     @keyframes fadeUp { from {opacity:0; transform:translateY(8px);} to {opacity:1; transform:translateY(0);} }
-    .hero-anim { animation: fadeUp .6s ease-out both; }
+    .hero-anim { animation: fadeUp 1.8s ease-out both; }
 
-    /* animation using letter-spacing */
+    /* trackIn animation for letter-spacing in hero title */
     @keyframes trackIn { from { letter-spacing: 2px; } to { letter-spacing: 0; } }
-    .track-anim { animation: trackIn .6s ease-out both; }
+    .track-anim { animation: trackIn 1.8s ease-out both; }
 
     /* reveal coupon code */
     .hidden-input { display:none; }
